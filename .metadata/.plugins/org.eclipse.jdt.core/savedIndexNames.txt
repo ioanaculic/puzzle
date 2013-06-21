@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+D:\agile_test\puzzle\.metadata\.plugins\org.eclipse.jdt.core
-73945364.index
-3154277542.index

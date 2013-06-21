@@ -1,89 +1,72 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-<<<<<<< HEAD
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
-
-    <Image
-        
-    android:visibility="false"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_centerInParent="true"
-    android:background="@drawable/a"
-    android:orientation="vertical" >
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" 
+    android:background="@drawable/background"
+    android:id="@+id/fereastra">
 
-    <LinearLayout
+  <!-- <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:ems="10" 
+        android:text=" "
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+         <requestFocus />
+    </EditText>> -->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/diana" />
-		 
-		 <EditText
-            android:id="@+id/editText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text=",diana " 
-            android:textColor="#FFFFFF">
-            <requestFocus />
-        </EditText>
-        
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/randomPlay"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/leaderboard"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/random_play"
+        android:onClick="randomPlay" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal" >
+    <ImageView
+        android:id="@+id/shuffleThis"
+        android:layout_width="142dp"
+        android:layout_height="61dp"
+        android:layout_below="@+id/randomPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/sigla2" />
 
-        <Button
-            android:id="@+id/randomPlay"
-            android:layout_width="100dp"
-            android:layout_height="114dp"
-            android:background="@drawable/buton"
-            android:text="Buton" />
+    <ImageView
+        android:id="@+id/leaderboard"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_alignTop="@+id/shuffleThis"
+        android:layout_marginRight="78dp"
+        android:layout_marginTop="39dp"
+        android:layout_toLeftOf="@+id/shuffleThis"
+        android:background="@drawable/leaderboards"
+        android:onClick="leaderB" />
 
-        <Button
-            android:id="@+id/playFriends"
-            android:layout_width="93dp"
-            android:layout_height="108dp"
-            android:background="@drawable/buton"
-            android:text="Buton nou" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/achievements"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_below="@+id/shuffleThis"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/shuffleThis"
+        android:background="@drawable/achievements"
+        android:onClick="achievements" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.52"
-        android:orientation="horizontal" >
+    <ImageView
+        android:id="@+id/playFriends"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_above="@+id/leaderboard"
+        android:layout_alignLeft="@+id/achievements"
+        android:background="@drawable/play_with_friends"/>
 
-        <Button
-            android:id="@+id/leaderboard"
-            android:layout_width="106dp"
-            android:layout_height="99dp"
-            android:background="@drawable/buton"
-            android:text="Buton nou" />
-
-        <Button
-            android:id="@+id/achievements"
-            android:layout_width="95dp"
-            android:layout_height="114dp"
-            android:background="@drawable/buton"
-            android:onClick="apasa"
-            android:text="Buton " />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
