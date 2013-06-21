@@ -1,86 +1,73 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
-
-    <Image
-        
-    android:visibility="false"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:layout_centerInParent="true"
-    android:background="@drawable/a"
-    android:orientation="vertical" >
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" 
+    android:background="@drawable/background">
 
-    <LinearLayout
+  <!-- <EditText
+        android:id="@+id/editText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/imageView1"
+        android:ems="10" 
+        android:text=" "
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+         <requestFocus />
+    </EditText>> -->
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/diana" />
-		 
-		 <EditText
-            android:id="@+id/editText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:text=",diana " 
-            android:textColor="#FFFFFF">
-            <requestFocus />
-        </EditText>
-        
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="142dp"
+        android:layout_height="61dp"
+        android:layout_above="@+id/achievements"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/sigla2" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:orientation="horizontal" >
+    <Button
+        android:id="@+id/leaderboard"
+        android:layout_width="200dp"
+        android:layout_height="138dp"
+        android:layout_alignBottom="@+id/achievements"
+        android:layout_alignLeft="@+id/randomPlay"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/leaderboards"
+        android:onClick="leaderB" />
 
-        <Button
-            android:id="@+id/randomPlay"
-            android:layout_width="100dp"
-            android:layout_height="114dp"
-            android:background="@drawable/buton"
-            android:text="Buton" />
+    <Button
+        android:id="@+id/randomPlay"
+        android:layout_width="200dp"
+        android:layout_height="138dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/imageView1"
+        android:background="@drawable/random_play"
+        android:onClick="randomPlay" />
 
-        <Button
-            android:id="@+id/playFriends"
-            android:layout_width="93dp"
-            android:layout_height="108dp"
-            android:background="@drawable/buton"
-            android:text="Buton nou" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/playFriends"
+        android:layout_width="200dp"
+        android:layout_height="138dp"
+        android:layout_above="@+id/leaderboard"
+        android:layout_marginBottom="33dp"
+        android:layout_marginLeft="84dp"
+        android:layout_toRightOf="@+id/imageView1"
+        android:background="@drawable/play_with_friends"
+        android:onClick="playFriends" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.52"
-        android:orientation="horizontal" >
+    <Button
+        android:id="@+id/achievements"
+        android:layout_width="200dp"
+        android:layout_height="138dp"
+        android:layout_alignLeft="@+id/playFriends"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/achievements"
+        android:onClick="achievements" />
 
-        <Button
-            android:id="@+id/leaderboard"
-            android:layout_width="106dp"
-            android:layout_height="99dp"
-            android:background="@drawable/buton"
-            android:text="Buton nou" />
-
-        <Button
-            android:id="@+id/achievements"
-            android:layout_width="95dp"
-            android:layout_height="114dp"
-            android:background="@drawable/buton"
-            android:onClick="apasa"
-            android:text="Buton " />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

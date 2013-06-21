@@ -1,2 +1,2 @@
 eclipse.preferences.version=1
-task-tag-projects-already-scanned=Puzzle,BaseGameUtils,SignIn,google-play-services_lib
+task-tag-projects-already-scanned=Puzzle,BaseGameUtils,google-play-services_lib,TestSignIn
