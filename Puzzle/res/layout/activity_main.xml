@@ -3,7 +3,8 @@
     android:layout_height="fill_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp" 
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:id="@+id/fereastra">
 
   <!-- <EditText
         android:id="@+id/editText1"
@@ -20,54 +21,52 @@
     </EditText>> -->
 
     <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="142dp"
-        android:layout_height="61dp"
-        android:layout_above="@+id/achievements"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/sigla2" />
-
-    <Button
-        android:id="@+id/leaderboard"
-        android:layout_width="200dp"
-        android:layout_height="138dp"
-        android:layout_alignBottom="@+id/achievements"
-        android:layout_alignLeft="@+id/randomPlay"
-        android:layout_marginBottom="35dp"
-        android:background="@drawable/leaderboards"
-        android:onClick="leaderB" />
-
-    <Button
         android:id="@+id/randomPlay"
         android:layout_width="200dp"
-        android:layout_height="138dp"
+        android:layout_height="125dp"
         android:layout_alignParentTop="true"
-        android:layout_marginRight="80dp"
-        android:layout_marginTop="17dp"
-        android:layout_toLeftOf="@+id/imageView1"
+        android:layout_alignRight="@+id/leaderboard"
+        android:layout_marginTop="29dp"
         android:background="@drawable/random_play"
         android:onClick="randomPlay" />
 
-    <Button
-        android:id="@+id/playFriends"
-        android:layout_width="200dp"
-        android:layout_height="138dp"
-        android:layout_above="@+id/leaderboard"
-        android:layout_marginBottom="33dp"
-        android:layout_marginLeft="84dp"
-        android:layout_toRightOf="@+id/imageView1"
-        android:background="@drawable/play_with_friends"
-        android:onClick="playFriends" />
+    <ImageView
+        android:id="@+id/shuffleThis"
+        android:layout_width="142dp"
+        android:layout_height="61dp"
+        android:layout_below="@+id/randomPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/sigla2" />
 
-    <Button
+    <ImageView
+        android:id="@+id/leaderboard"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_alignTop="@+id/shuffleThis"
+        android:layout_marginRight="78dp"
+        android:layout_marginTop="39dp"
+        android:layout_toLeftOf="@+id/shuffleThis"
+        android:background="@drawable/leaderboards"
+        android:onClick="leaderB" />
+
+    <ImageView
         android:id="@+id/achievements"
         android:layout_width="200dp"
-        android:layout_height="138dp"
-        android:layout_alignLeft="@+id/playFriends"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="64dp"
+        android:layout_height="125dp"
+        android:layout_below="@+id/shuffleThis"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/shuffleThis"
         android:background="@drawable/achievements"
         android:onClick="achievements" />
+
+    <ImageView
+        android:id="@+id/playFriends"
+        android:layout_width="200dp"
+        android:layout_height="125dp"
+        android:layout_above="@+id/leaderboard"
+        android:layout_alignLeft="@+id/achievements"
+        android:background="@drawable/play_with_friends"/>
 
 </RelativeLayout>
