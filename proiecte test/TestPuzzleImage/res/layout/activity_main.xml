@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal">
+         
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/01"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="01"
+                />
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/02"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="02"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/03"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="03"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/04"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="04"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/05"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="05"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/06"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="06"/>
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/07"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="07"
+                />
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/08"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="08"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/09"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="09"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/10"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="10"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/11"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="11"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/12"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="12"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/13"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="13"
+                />
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/14"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="14"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/15"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="15"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/16"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="16"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/17"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="17"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/18"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="18"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal">
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/19"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="19"
+                />
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/20"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="20"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/21"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="21"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/22"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="22"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/23"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="23"/>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/24"
+                android:src="@drawable/ic_launcher"
+                android:contentDescription="24"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
