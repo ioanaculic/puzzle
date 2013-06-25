@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
     ImageView butonLeaderBoard;
     ImageView butonAchievements;
     ImageView shuffleThis;
+    ImageView stanga_sus,stanga_jos,dreapta_sus,dreapta_jos;
     View fereastra;
     
     public static int razaButon = 150; 
@@ -37,6 +38,38 @@ public class MainActivity extends Activity {
         butonAchievements=(ImageView) findViewById(R.id.achievements);
         shuffleThis = (ImageView)findViewById(R.id.shuffleThis);
         fereastra = findViewById(R.id.fereastra);
+        stanga_sus=(ImageView)findViewById(R.id.stanga_sus);
+        stanga_jos=(ImageView)findViewById(R.id.stanga_jos);
+        dreapta_sus=(ImageView)findViewById(R.id.dreapta_sus);
+        dreapta_jos=(ImageView)findViewById(R.id.dreapta_jos);
+        
+        new Thread(new Runnable() {
+
+        	@Override
+        	public void run() {
+        	// TODO Auto-generated method stub
+        	try {
+        	Thread.sleep(5000);
+        	} catch (InterruptedException e) {
+        	// TODO Auto-generated catch block
+        	e.printStackTrace();
+        	}
+
+        
+        	runOnUiThread(new Runnable() {
+
+        	@Override
+        	public void run() {
+        	// TODO Auto-generated method stub
+        	stanga_sus.setVisibility(View.VISIBLE);
+        	stanga_jos.setVisibility(View.VISIBLE);
+        	dreapta_sus.setVisibility(View.VISIBLE);
+        	dreapta_jos.setVisibility(View.VISIBLE);
+        	};
+        	
+        	});
+        	}
+        	}).start();
     }
 
     @Override

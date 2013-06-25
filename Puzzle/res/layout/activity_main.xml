@@ -1,10 +1,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp" 
+    android:id="@+id/fereastra"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/background"
-    android:id="@+id/fereastra">
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
 
   <!-- <EditText
         android:id="@+id/editText1"
@@ -60,6 +60,15 @@
         android:layout_toRightOf="@+id/shuffleThis"
         android:background="@drawable/achievements"
         android:onClick="achievements" />
+    
+    <ImageView 
+        android:id="@+id/stanga_sus"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/stanga_sus"
+        android:layout_marginLeft="250dp"/>
 
     <ImageView
         android:id="@+id/playFriends"
@@ -68,5 +77,33 @@
         android:layout_above="@+id/leaderboard"
         android:layout_alignLeft="@+id/achievements"
         android:background="@drawable/play_with_friends"/>
+
+    <ImageView
+        android:id="@+id/dreapta_sus"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/leaderboard"
+        android:layout_toLeftOf="@+id/playFriends"
+        android:src="@drawable/dreapta_sus" />
+
+    <ImageView
+        android:id="@+id/stanga_jos"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/achievements"
+        android:layout_toRightOf="@+id/randomPlay"
+        android:src="@drawable/stanga_jos" />
+
+    <ImageView
+        android:id="@+id/dreapta_jos"
+        android:visibility="gone"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/leaderboard"
+        android:layout_alignLeft="@+id/dreapta_sus"
+        android:layout_marginLeft="18dp"
+        android:src="@drawable/dreapta_jos" />
 
 </RelativeLayout>
