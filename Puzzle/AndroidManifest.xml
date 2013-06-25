@@ -27,6 +27,21 @@
             android:name=".RandomPlay"
             android:label="randomPl" >
         </activity>
+        
+        <activity
+            android:name=".PlayFriends"
+            android:label="plFr" >
+        </activity>
+        
+        <activity
+            android:name=".Achievements"
+            android:label="achiev" >
+        </activity>
+        
+        <activity
+            android:name=".LeaderBoard"
+            android:label="ldrB" >
+        </activity>
     </application>
 
 </manifest>

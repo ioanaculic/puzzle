@@ -21,16 +21,11 @@ public class MainActivity extends Activity {
     ImageView stanga_sus,stanga_jos,dreapta_sus,dreapta_jos;
     View fereastra;
     
-    public static int razaButon = 150; 
-    public final static int razaCentru = 175;
+    public static int razaButon; 
+    public static int razaCentru;
     
-    float dx=0, dy=0;
-    
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
+    public void reset(){
+    	setContentView(R.layout.activity_main);
         
         butonRandomPlay= (ImageView) findViewById(R.id.randomPlay);
     	butonPlayFriends= (ImageView) findViewById(R.id.playFriends);
@@ -38,6 +33,7 @@ public class MainActivity extends Activity {
         butonAchievements=(ImageView) findViewById(R.id.achievements);
         shuffleThis = (ImageView)findViewById(R.id.shuffleThis);
         fereastra = findViewById(R.id.fereastra);
+<<<<<<< HEAD
         stanga_sus=(ImageView)findViewById(R.id.stanga_sus);
         stanga_jos=(ImageView)findViewById(R.id.stanga_jos);
         dreapta_sus=(ImageView)findViewById(R.id.dreapta_sus);
@@ -70,6 +66,17 @@ public class MainActivity extends Activity {
         	});
         	}
         	}).start();
+=======
+        
+        Bundle b = new Bundle();
+        b= getIntent().getExtras();
+    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);        
+        reset();
+>>>>>>> 9f54b0bbc1c21e21ba4364fb49897314952e7164
     }
 
     @Override
@@ -81,12 +88,47 @@ public class MainActivity extends Activity {
         return true;
     }
     
+	public void dragButon(float bx, float by, float cx, float cy, float x, float y, ImageView b){
+		if (((bx)<=x)&&((bx+razaButon)>=x) && ((by)<=y)&&((by+razaButon)>=y)){
+			
+			//il plimb dupa deget
+    		b.setX(x-razaButon/2);
+    		b.setY(y-razaButon/2);
+    		
+    		//verific daca ma apropii de centru in raza mica
+    		if (((cx-shuffleThis.getWidth()/2)<=x)&&((cx+shuffleThis.getWidth()/2)>=x) && ((cy-shuffleThis.getWidth()/2)<=y)&&((cy+shuffleThis.getWidth()/2)>=y)){
+				    //System.out.println("am ajuns 1!");
+				   	b.setX(cx-razaButon/2);
+				   	b.setY(cy-b.getHeight()/2);
+				   	
+				   	shuffleThis.setVisibility(View.INVISIBLE);
+				   	
+				   	if (b == butonRandomPlay) {
+				   		randomPlay(fereastra);
+				   		System.out.println("randomPlay");
+				   		}
+				   	else if (b == butonPlayFriends){
+				   		playFriends(fereastra);
+				   		System.out.println("plFr");
+				   	}
+				   	else if (b == butonLeaderBoard){
+				   		leaderB(fereastra);
+				   		System.out.println("leaderB");
+				   	}
+				   	else if (b == butonAchievements){
+				   		achievements(fereastra);
+				   		System.out.println("ACHIEV");
+				   	}
+				   	
+				   	//randomPlay(fereastra);
+    		}
+	}
+		
+	}
     public boolean onTouchEvent(android.view.MotionEvent event) {
     	// TODO Auto-generated method stub
-    	
-    	
-    	
     	razaButon = butonPlayFriends.getWidth();
+    	razaCentru= shuffleThis.getWidth();
     	System.out.println(razaButon);
     	
     	//iau coord x pentru fiecare buton
@@ -101,9 +143,7 @@ public class MainActivity extends Activity {
     	float b3y = butonLeaderBoard.getY();
     	float b4y = butonAchievements.getY();
     	
-    	
-    	
-    	//coord centru
+    	//coord centrului pt butonul din centru
     	float cx = shuffleThis.getX()+shuffleThis.getWidth()/2;
     	float cy = 	shuffleThis.getY()+shuffleThis.getHeight()/2;
     	
@@ -111,81 +151,13 @@ public class MainActivity extends Activity {
     	float x = event.getX();
     	float y = event.getY();
     	
-    	System.out.println(b1x+" "+b1y+" "+x+" "+y);
-    	
     	if (event.getAction() == MotionEvent.ACTION_MOVE){
-	    	//pentru cazul butonului 1
-	    	//verific ca actiunea sa se intample in jurul butonului
-	    	if (((b1x)<=x)&&((b1x+razaButon)>=x) && ((b1y)<=y)&&((b1y+razaButon)>=y)){
-	    			//il plimb dupa deget
-	    			dx = b1x-x;
-	    			dy = b1y-y;
-		    		butonPlayFriends.setX(x-razaButon/2);
-		    		butonPlayFriends.setY(y-razaButon/2);
-		    		//System.out.println(x+","+y);
-		    		
-		    		//verific daca ma apropii de centru in raza mica
-		    		//daca da, sare in centru
-		    			if (((cx-razaCentru)<=x)&&((cx+razaCentru)>=x)){
-		    				if (((cy-razaCentru)<=y)&&((cy+razaCentru)>=y)){
-						    	System.out.println("am ajuns 1!");
-						    	butonPlayFriends.setX(cx-razaButon/2);
-						    	butonPlayFriends.setY(cy-butonPlayFriends.getHeight()/2);
-		    				}
-		    			}
-	    	}
+    		dragButon(b2x, b2y, cx, cy, x, y, butonRandomPlay);	    	
+	    	dragButon(b1x, b1y, cx, cy, x, y, butonPlayFriends);   	
+	    	dragButon(b3x, b3y, cx, cy, x, y, butonLeaderBoard);
+	    	dragButon(b4x, b4y, cx, cy, x, y, butonAchievements);	    	
     	}
-//    	else
-//    	
-//    	//pentru cazul butonului 2
-//	    	if (((b2x-razaButon)<=x)&&((b2x+razaButon)>=x)){
-//	    		if (((b2y-razaButon)<=y)&&((b2y+razaButon)>=y)){
-//	    			
-//	    			butonRandomPlay.setX(x);
-//	    			butonRandomPlay.setY(y);
-//	    			//System.out.println(x+","+y);
-//	    			if (((cx-razaCentru)<=x)&&((cx+razaCentru)>=x)){
-//	    				if (((cy-razaCentru)<=y)&&((cy+razaCentru)>=y)){
-//	    					//System.out.println("am ajuns 2!");
-//					    	butonRandomPlay.setX(cx);
-//					    	butonRandomPlay.setY(cy);
-//	    				}
-//	    			}	
-//	    		}
-//	    	}
-//	    	else
-//	    //pentru cazul butonului 3
-//	    	if (((b3x-razaButon)<=x)&&((b3x+razaButon)>=x)){
-//	    		if (((b3y-razaButon)<=y)&&((b3y+razaButon)>=y)){	
-//	    			butonLeaderBoard.setX(x);
-//	    			butonLeaderBoard.setY(y);
-//	    			//System.out.println(x+","+y);
-//	    			if (((cx-razaCentru)<=x)&&((cx+razaCentru)>=x)){
-//	    				if (((cy-razaCentru)<=y)&&((cy+razaCentru)>=y)){
-//	    					//System.out.println("am ajuns 3!");
-//	    					butonLeaderBoard.setX(cx);
-//	    					butonLeaderBoard.setY(cy);
-//	    				}
-//	    			}
-//	    		}
-//	    	}
-//	    	else
-//	    //pentru cazul butonului 4
-//	    	if (((b4x-razaButon)<=x)&&((b4x+razaButon)>=x)) {
-//	    		if (((b4y-razaButon)<=y)&&((b4y+razaButon)>=y)){
-//			    	butonAchievements.setX(x);
-//			    	butonAchievements.setY(y);
-//			    	//System.out.println(x+","+y);
-//			    	if (((cx-razaCentru)<=x)&&((cx+razaCentru)>=x)){
-//			    		if (((cy-razaCentru)<=y)&&((cy+razaCentru)>=y)){
-//					    	//System.out.println("am ajuns 4!");
-//					    	butonAchievements.setX(cx);
-//					    	butonAchievements.setY(cy);
-//			    		}
-//			    	}
-//	    		}
-//	    	}
-    	
+
 	    return false;
     	}
     
@@ -195,18 +167,18 @@ public class MainActivity extends Activity {
     }
     
     public void playFriends (View v){	
-    	//Intent i2 = new Intent(this, PlayFriends.class);
-    	//startActivity(i2);	
+    	Intent i2 = new Intent(this, PlayFriends.class);
+    	startActivity(i2);		
     }
     
     public void leaderB (View v){ 	
-    	//Intent i3 = new Intent(this, LeaderBoard.class);
-    	//startActivity(i3);
+    	Intent i3 = new Intent(this, LeaderBoard.class);
+    	startActivity(i3);
     }
     
     public void achievements (View v){	
-    	//Intent i4 = new Intent(this, Achievements.class);
-    	//startActivity(i4);
+    	Intent i4 = new Intent(this, Achievements.class);
+    	startActivity(i4);
     }
     
     
