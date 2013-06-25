@@ -28,7 +28,7 @@
         android:layout_alignRight="@+id/leaderboard"
         android:layout_marginTop="29dp"
         android:background="@drawable/random_play"
-        android:onClick="randomPlay" />
+         />
 
     <ImageView
         android:id="@+id/shuffleThis"
@@ -48,7 +48,7 @@
         android:layout_marginTop="39dp"
         android:layout_toLeftOf="@+id/shuffleThis"
         android:background="@drawable/leaderboards"
-        android:onClick="leaderB" />
+        />
 
     <ImageView
         android:id="@+id/achievements"
@@ -58,8 +58,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginTop="18dp"
         android:layout_toRightOf="@+id/shuffleThis"
-        android:background="@drawable/achievements"
-        android:onClick="achievements" />
+        android:background="@drawable/achievements" />
 
     <ImageView
         android:id="@+id/playFriends"
@@ -67,6 +66,6 @@
         android:layout_height="125dp"
         android:layout_above="@+id/leaderboard"
         android:layout_alignLeft="@+id/achievements"
-        android:background="@drawable/play_with_friends"/>
+        android:background="@drawable/play_with_friends" />
 
 </RelativeLayout>
