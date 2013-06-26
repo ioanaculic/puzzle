@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
         butonAchievements=(ImageView) findViewById(R.id.achievements);
         shuffleThis = (ImageView)findViewById(R.id.shuffleThis);
         fereastra = findViewById(R.id.fereastra);
-<<<<<<< HEAD
+
         stanga_sus=(ImageView)findViewById(R.id.stanga_sus);
         stanga_jos=(ImageView)findViewById(R.id.stanga_jos);
         dreapta_sus=(ImageView)findViewById(R.id.dreapta_sus);
@@ -66,7 +66,7 @@ public class MainActivity extends Activity {
         	});
         	}
         	}).start();
-=======
+
         
         Bundle b = new Bundle();
         b= getIntent().getExtras();
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);        
         reset();
->>>>>>> 9f54b0bbc1c21e21ba4364fb49897314952e7164
+
     }
 
     @Override
@@ -162,7 +162,7 @@ public class MainActivity extends Activity {
     	}
     
     public void randomPlay(View v){
-    	Intent i = new Intent(MainActivity.this, RandomPlay.class);
+    	Intent i = new Intent(MainActivity.this, PozaPuzzle.class);
     	startActivity(i);    	
     }
     

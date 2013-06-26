@@ -22,25 +22,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        	
         <activity
-            android:name=".RandomPlay"
+            android:name="upb.puzzle.RandomPlay"
             android:label="randomPl" >
         </activity>
-        
         <activity
-            android:name=".PlayFriends"
+            android:name="upb.puzzle.PlayFriends"
             android:label="plFr" >
         </activity>
-        
         <activity
-            android:name=".Achievements"
+            android:name="upb.puzzle.Achievements"
             android:label="achiev" >
         </activity>
-        
         <activity
-            android:name=".LeaderBoard"
+            android:name="upb.puzzle.LeaderBoard"
             android:label="ldrB" >
+        </activity>
+        <activity
+            android:name="upb.puzzle.PozaPuzzle"
+            android:label="@string/title_activity_poza_puzzle" >
         </activity>
     </application>
 
